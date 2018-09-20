@@ -1,0 +1,11 @@
+- name: Create SSH folder
+  file:
+    path: /home/vagrant/.ssh
+    state: directory
+    mode: 0700
+
+- name: Get vagrant insecure public key
+  get_url:
+    url: https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub
+    dest: /home/vagrant/.ssh/authorized_keys
+    mode: 0600
