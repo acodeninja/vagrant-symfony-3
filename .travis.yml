@@ -18,4 +18,4 @@ install:
 
 script:
     - echo "Build tool versions > " && echo "virtualbox $(VBoxManage -v)" && vagrant -v && echo "packer $(packer -v)" && ansible --version
-    - packer build build.json
+    - travis_wait 30 packer build build.json
