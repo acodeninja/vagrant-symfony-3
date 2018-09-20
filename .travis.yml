@@ -14,9 +14,5 @@ install:
     - rm vagrant_2.1.5_x86_64.deb
 
 script:
-    - echo "Build tool versions > "
-    - VBoxManage -v
-    - vagrant -v
-    - packer -v
-    - ansible --version
+    - echo "Build tool versions > " && VBoxManage -v && vagrant -v && packer -v && ansible --version
     - packer build build.json
