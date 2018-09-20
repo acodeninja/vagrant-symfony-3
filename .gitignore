@@ -6,3 +6,6 @@ packer_cache/
 
 # For ansible retries
 *.retry
+
+# For jetbrains
+.idea/
