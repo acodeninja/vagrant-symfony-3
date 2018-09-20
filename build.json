@@ -30,12 +30,12 @@
     ],
     "ssh_username": "vagrant",
     "ssh_password": "vagrant",
-    "ssh_wait_timeout": "10m",
+    "ssh_wait_timeout": "20m",
     "shutdown_command": "sudo systemctl poweroff",
     "headless": true,
     "vboxmanage": [
-      ["modifyvm", "{{.Name}}", "--memory", "1024"],
-      ["modifyvm", "{{.Name}}", "--cpus", "1"]
+      ["modifyvm", "{{.Name}}", "--memory", "2048"],
+      ["modifyvm", "{{.Name}}", "--cpus", "2"]
     ]
   }],
   "provisioners": [{
