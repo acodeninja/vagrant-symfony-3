@@ -10,4 +10,8 @@ install:
     - sudo mv packer /usr/bin/packer
     - sudo chmod u+x /usr/bin/packer
     - packer -v
+    - wget https://releases.hashicorp.com/vagrant/2.1.5/vagrant_2.1.5_x86_64.deb
+    - sudo dpgk -i vagrant_2.1.5_x86_64.deb
+    - rm vagrant_2.1.5_x86_64.deb
+    - vagrant -v
 
