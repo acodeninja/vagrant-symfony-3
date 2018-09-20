@@ -1,5 +1,8 @@
-sudo: required
 dist: trusty
+sudo: required
+cache:
+  directories:
+    - packer_cache/
 install:
     - echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" | sudo tee -a /etc/apt/sources.list
     - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
