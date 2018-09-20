@@ -14,4 +14,5 @@ install:
     - sudo dpkg -i vagrant_2.1.5_x86_64.deb
     - rm vagrant_2.1.5_x86_64.deb
     - vagrant -v
-
+script:
+    - packer build build.json
