@@ -1,8 +1,11 @@
+# Build settings
 dist: trusty
 sudo: required
 cache:
   directories:
     - packer_cache/
+
+# Installation Script
 install:
     - echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" | sudo tee -a /etc/apt/sources.list
     - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
@@ -16,6 +19,7 @@ install:
     - sudo dpkg -i vagrant_2.1.5_x86_64.deb
     - rm vagrant_2.1.5_x86_64.deb
 
+# Build Script
 script:
     - echo "Build tool versions > " && echo "virtualbox $(VBoxManage -v)" && vagrant -v && echo "packer $(packer -v)" && ansible --version
     - travis_wait 30 packer build build.json
