@@ -3,7 +3,7 @@ dist: trusty
 install:
     - echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" | sudo tee -a /etc/apt/sources.list
     - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-    - sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r) virtualbox-5.2
+    - sudo apt-get update && sudo apt-get install -y linux-headers-$(uname -r) virtualbox-5.2 ansible
     - VBoxManage -v
     - wget https://releases.hashicorp.com/packer/1.3.1/packer_1.3.1_linux_amd64.zip
     - unzip packer_1.3.1_linux_amd64.zip
