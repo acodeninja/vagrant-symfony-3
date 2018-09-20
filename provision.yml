@@ -3,5 +3,3 @@
   roles:
     - common
     - nginx
-    - vagrant
-    - virtualbox

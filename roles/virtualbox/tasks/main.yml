@@ -1,5 +1,0 @@
-- name: Install Virtualbox Guest Additions
-  become: true
-  apt:
-    name: virtualbox-guest-dkms
-    state: latest

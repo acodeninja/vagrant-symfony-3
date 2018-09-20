@@ -22,4 +22,6 @@ install:
 # Build Script
 script:
     - echo "Build tool versions > " && echo "virtualbox $(VBoxManage -v)" && vagrant -v && echo "packer $(packer -v)" && ansible --version
-    - travis_wait 30 packer build build.json
+    - vagrant box add ubuntu/xenial64
+    - export VAGRANT_OVF_LOCATION=$(ls ~/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/*/virtualbox/box.ovf)
+    - packer build build.json
